@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+             android:id="@+id/recyclerView_add"
+             android:title="添加"
+             android:icon="@drawable/add_img_selected"
+             app:showAsAction="ifRoom"
+            />
+        <item
+            android:id="@+id/recyclerView_delete"
+            android:title="删除"
+            android:icon="@drawable/edit_close"
+            app:showAsAction="ifRoom"
+            />
+            <group android:id="@+id/recyclerView_group">
+                <item android:id="@+id/recyclerView_H"
+                    android:title="recyclerView_H"
+                    app:showAsAction="ifRoom"
+                    />
+                <item android:id="@+id/recyclerView_v"
+                    android:title="recyclerView_v"
+                    app:showAsAction="ifRoom"
+                    />
+                <item android:id="@+id/recyclerView_G"
+                    android:title="recyclerView_G"
+                    app:showAsAction="ifRoom"
+                    />
+                <item android:id="@+id/recyclerView_S"
+                    android:title="recyclerView_S"
+                    app:showAsAction="ifRoom"
+                    />
+            </group>
+
+</menu>

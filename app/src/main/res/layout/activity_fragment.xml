@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:background="@color/darkCyan"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NewsDay"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl_loading_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        >
+        
+        <FrameLayout
+            android:id="@+id/news_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </FrameLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/add_more_background"
+            android:layout_marginBottom="5dp"
+            />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/bottom_radio"
+                android:drawableTop="@drawable/gadio_src_news"
+                android:text="资讯"
+                android:id="@+id/main_radio_new"
+                android:checked="true"/>
+
+            <RadioButton
+                style="@style/bottom_radio"
+                android:drawableTop="@drawable/gadio_src_collect"
+                android:text="热点"
+                android:id="@+id/main_radio_hot" />
+
+            <RadioButton
+                style="@style/bottom_radio"
+                android:drawableTop="@drawable/gadio_src_find"
+                android:text="搜索"
+                android:id="@+id/main_radio_search" />
+        </RadioGroup>
+
+         </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/loading_naView"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity ="start"
+            app:headerLayout="@layout/drawer_heard"
+            app:menu="@menu/loading_drawer"
+            > </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

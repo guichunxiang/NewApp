@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_toolbar"
+        android:background="@color/darkCyan"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/iv_news_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_return"
+            />
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NewsDay"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            />
+       <ImageView
+           android:id="@+id/iv_news_collection"
+           android:layout_width="40dp"
+           android:layout_height="50dp"
+           android:src="@drawable/star_selected"
+           android:layout_alignParentRight="true"
+           android:layout_gravity="center_vertical|right"
+           />
+    </android.support.v7.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/news_pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbar_power_bg"
+        />
+    <WebView
+        android:id="@+id/news_info_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>
